@@ -1,0 +1,282 @@
+:root {
+    --bg-color: #1a202c;
+    --header-color: #4a5568;
+    --button-hover: #a1a5a8;
+    --font: "Fira Code", monospace;
+}
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: var(--bg-color);
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+
+header {
+    width: 100%;
+    position: fixed;
+    background-color: var(--header-color);
+    height: 9vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 2vw;
+    z-index: 1;
+}
+
+nav button {
+    width: 100%;
+    padding: 1vh;
+    background-color: var(--bg-color);
+    border: none;
+    color: white;
+    font-size: 20px;
+}
+
+nav button:hover {
+    background-color: var(--button-hover);
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+nav {
+    top: 10%;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 3vh;
+    margin: 6vh 8vw;
+    width: min-content;
+}
+.blog-link, .blog-description, nav button {
+    font-family: var(--font);
+}
+.content {
+    max-width: 200px;
+    height: max-content;
+    border: 1px solid var(--header-color);
+    padding: 10px;
+    transition: 300ms;
+
+}
+.blog-link {
+    text-transform: capitalize;
+    text-align: left;
+    color: white;
+    font-size: 23px;
+    cursor: pointer;
+    transition: 450ms;
+}  
+.blog-description {
+    text-align: left;
+    color: white;
+    font-size: 18px;
+}
+.blog-date {
+    font-family: var(--font);
+    text-align: left;
+    color: white;
+    font-size: 14px;
+}
+.blog-link:hover {
+    font-size: 30px;
+    transition: 450ms;
+    text-decoration: underline;
+}
+#feed {
+    position: absolute;
+    left: 45%;
+    top: 20vh;
+    flex-direction: column;
+    gap: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 20px;
+    color: white;
+    font-family: Arial;
+}
+#main {
+    display: flex;
+    justify-content: space-between;
+}
+#logo-text {
+    color: white;
+    font-family: Arial;
+    font-size: 20px;
+
+}
+#logo-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 1vw;
+    align-items: center;
+    cursor: pointer;
+}
+img {
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    }
+#topics {
+    color: white;
+    font-family: var(--font);
+    font-weight: 500;
+    font-size: 30px;
+}
+#separation-bar {
+    background-color: white;
+    height: 2px;
+    width: 100%;
+}
+
+#search-div {
+    padding: 1vw 1vh;
+}
+
+#search-bar {
+    outline: none;
+    width: 49vw;
+    background-color: #2d3748;
+    color: white;
+    padding: 1vh;
+    border-radius: 25px;
+    display: inline-block;
+
+    font-size: 15px;
+
+    border: solid;
+    border-width: 0.15vw;
+    border-color: black;
+}
+
+#login-button-container {
+    display: flex;
+    gap: 2vw;
+    position: relative;
+    top: 0.4vh;
+
+}
+
+#login-button {
+    background-color: white;
+    border: solid 0.15vw black;
+    cursor: pointer;
+    width: 6vw;
+    color: black;
+
+    border-radius: 25px;
+    padding: 0.85vh;
+    font-size: 15px;
+    font-weight: bold;
+
+    transition: 100ms;
+}
+
+#login-button:hover {
+
+    background-color: var(--button-hover);
+    transition: 100ms;
+
+}
+
+#signup-button {
+    background-color: white;
+    border: solid 0.15vw black;
+    cursor: pointer;
+    width: 6vw;
+    color: black;
+
+    border-radius: 25px;
+    padding: 1vh;
+    font-size: 15px;
+    font-weight: bold;
+
+    transition: 100ms;
+}
+
+#signup-button:hover {
+
+    background-color: var(--button-hover);
+    transition: 100ms;
+
+}
+
+#avatar-dropdown {
+    background-color: white;
+    border: solid 0.15vw black;
+    cursor: pointer;
+    width: 100%;
+    color: black;
+
+    border-radius: 25px;
+    padding: 0.85vh;
+    font-size: 15px;
+    font-weight: bold;
+
+    transition: 100ms;
+    filter: brightness(100%);
+}
+
+#avatar-dropdown:hover {
+
+    filter: brightness(60%);
+    transition: 100ms;
+
+}
+#all-posts {
+    font-family: var(--font);
+    font-size: 24px;
+    font-weight: 700;
+}
+#loading-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2vh;
+    border: 1px solid var(--header-color);
+    padding: 10px;
+    width: 150px;
+    height: 90px;
+    transition: 300ms;
+}
+
+#loading-p {
+    font-size: 23px;
+    color: var(--header-color);
+    background-color: var(--header-color);
+    opacity: 20%;
+}
+
+#loading-description {
+    font-size: 18px;
+    color: var(--header-color);
+    background-color: var(--header-color);
+    margin-top: 15px;
+    opacity: 20%;
+}
+
+#loading-date {
+    font-size: 14px;
+    color: var(--header-color);
+    background-color: var(--header-color);
+    margin-top: 15px;
+    opacity: 20%
+}
+ @media screen and (max-width: 720px) {
+     #login-button {
+         display: none;
+     }
+     #signup-button {
+         display: none;
+     }
+ }

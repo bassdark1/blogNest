@@ -24,12 +24,14 @@ body {
 }
 
 #usernameInput {
+    outline: none;
     background-color: #4a5568;
     color: #cbd5e0;
     margin-bottom: 10px;
 }
 
 #passwordInput {
+    outline: none;
     background-color: #4a5568;
     color: #cbd5e0;
     margin-bottom: 10px;

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>BlogNest - For You</title>
+        <link rel="stylesheet" type="text/css" href="recommended.css">
+        <link rel="icon" href="/favicon.png" type="image/icon type">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <div id="logo-container" onclick="window.location.href = '/index.html'">
+            <img src="/favicon.png">
+            <div id="logo-text">
+               BlogNest
+            </div>
+            </div>
+          <div id="search-div">
+          <input type="search" id="search-bar" placeholder="Search on BlogNest">
+          </div>
+          <div id="login-button-container">
+          </div>
+        </header>
+      <nav>
+
+        <button>Your Nesters</button>
+        <button id="recent-button">Most recent Nests</button>
+        <button id="for-you-button">For you</button>
+
+        <div id="separation-bar"></div>
+
+        <div id="topics">Topics</div>
+        <button>Tech</button>
+        <button>News</button>
+        <button>Nature</button>
+        <button>Sports</button>
+        <button>Gaming</button>
+        <button>Science</button>
+
+
+      </nav>
+
+        <div id="feed">
+            <span id="all-posts">BlogNest - For you</span>
+         </div>
+
+        <script src="recommended.js"></script>
+        <script src="/assets/scripts/cookieLogin.js"></script>
+    </body>
+</html>

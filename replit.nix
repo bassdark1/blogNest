@@ -1,3 +1,6 @@
 {pkgs}: {
-  deps = [ ];
+  deps = [
+    pkgs.vim
+    pkgs.postgresql
+   ];
 }

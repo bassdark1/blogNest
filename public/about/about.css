@@ -1,0 +1,170 @@
+:root {
+    --bg-color: #1a202c;
+    --header-color: #4a5568;
+    --button-hover: #a1a5a8;
+    --font: "Fira Code", monospace;
+}
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: var(--bg-color);
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+
+header {
+    width: 100%;
+    position: fixed;
+    background-color: var(--header-color);
+    height: 9vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 2vw;
+    z-index: 1;
+}
+
+#logo-text {
+    color: white;
+    font-family: Arial;
+    font-size: 20px;
+
+}
+#logo-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 1vw;
+    align-items: center;
+    cursor: pointer;
+}
+img {
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    }
+
+#search-div {
+    padding: 1vw 1vh;
+}
+
+#search-bar {
+    outline: none;
+    width: 49vw;
+    background-color: #2d3748;
+    color: white;
+    padding: 1vh;
+    border-radius: 25px;
+    display: inline-block;
+
+    font-size: 15px;
+
+    border: solid;
+    border-width: 0.15vw;
+    border-color: black;
+}
+
+#login-button-container {
+    display: flex;
+    gap: 2vw;
+    position: relative;
+    top: 0.4vh;
+
+}
+
+#login-button {
+    background-color: white;
+    border: solid 0.15vw black;
+    cursor: pointer;
+    width: 6vw;
+    color: black;
+
+    border-radius: 25px;
+    padding: 0.85vh;
+    font-size: 15px;
+    font-weight: bold;
+
+    transition: 100ms;
+}
+
+#login-button:hover {
+
+    background-color: var(--button-hover);
+    transition: 100ms;
+
+}
+
+#signup-button {
+    background-color: white;
+    border: solid 0.15vw black;
+    cursor: pointer;
+    width: 6vw;
+    color: black;
+
+    border-radius: 25px;
+    padding: 1vh;
+    font-size: 15px;
+    font-weight: bold;
+
+    transition: 100ms;
+}
+
+#signup-button:hover {
+
+    background-color: var(--button-hover);
+    transition: 100ms;
+
+}
+
+#avatar-dropdown {
+    background-color: white;
+    border: solid 0.15vw black;
+    cursor: pointer;
+    width: 100%;
+    color: black;
+
+    border-radius: 25px;
+    padding: 0.85vh;
+    font-size: 15px;
+    font-weight: bold;
+
+    transition: 100ms;
+    filter: brightness(100%);
+}
+
+#avatar-dropdown:hover {
+
+    filter: brightness(60%);
+    transition: 100ms;
+
+}
+
+#main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; 
+    top: 20vh;
+    flex-direction: column;
+    gap: 10vh;
+}
+#main-title {
+    font-size: 36px;
+    color: white;
+    font-family: var(--font);
+    font-weight: 600;
+}
+
+#first-description {
+    color: white;
+    font-size: 20px;
+    font-family: var(--font);
+    width: 600px;
+    font-weight: 500;
+}

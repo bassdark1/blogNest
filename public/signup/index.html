@@ -10,7 +10,14 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
-
+        <script async defer>
+            var onloadCallback = function() {
+                grecaptcha.render("captcha-container", {
+                    'sitekey': '6Ld8z3YpAAAAANBAh5_3XYi8Tqy9JUMcERQXDP1F',
+                });
+            };
+        </script>
+        <script type="application/javascript" src="https://www.google.com/recaptcha/api.js?onload=onloadCallback" async defer></script>
     </head>
 
     <body>
@@ -23,7 +30,10 @@
                 <input class="w-full border border-gray-300 rounded px-3 py-2" placeholder="Username" id="usernameInput">
                 <input type="password" class="w-full border border-gray-300 rounded px-3 py-2" placeholder="Password" id="passwordInput">
                 <input type="password" class="w-full border border-gray-300 rounded px-3 py-2" placeholder="Confirm password" id="passwordConfirmInput">
-                <div id="error-message">Press enter</div>
+                <div id="captcha-container"></div>
+                <div id="register">Already have an account? <a href="/login">Log in</a></div>
+                <div id="error-message"></div>
+                <div class="rounded-lg shadow-lg" id="signup-button">Sign up</div>
             </div>
         </div>
         <script src="assets/scripts/main.js"></script>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Profile</title>
+        <link rel="stylesheet" type="text/css" href="profile.css">
+        <link rel="icon" type="image/x-icon" href="../favicon.png">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <header>
+          <div id="logo-container" onclick="window.location.href = '/'">
+            <img src="../favicon.png" />
+            <div id="logo-text">BlogNest</div>
+          </div>
+          <div id="search-div">
+            <input type="search" id="search-bar" placeholder="Search on BlogNest" />
+          </div>
+            <div id="login-button-container">
+            </div>
+        </header>
+        <div id="main">
+        <div id="user-info-container">
+            <div id="profile-pic-container">
+                <div id="profile-pic"></div>
+                <div id="edit-profile-pic">Edit profile picture</div>
+            </div>
+            <div id="username-title"></div>
+            <div id="account-creation-date"></div>
+            <div id="bio-container">
+                <div id="bio-text"></div>
+                <button id="edit-bio">Edit bio</button>
+            </div>
+            <div id="follow-container">
+                <div id="follower-count" onclick="window.location.href = '/follower/'"></div>
+                <button id="follow-button">Follow</button>
+            </div>
+            <button id="create-post-button" onclick="window.location.href= '/submit'">Create a post</button>
+            <div id="user-post">
+                <div id="user-post-text">More posts from this user:</div>
+                <div id="posts-container">
+            </div>
+            <div id="error-message"></div>
+        </div>
+
+        </div>
+        <script src="main.js"></script>
+        <script src="/assets/scripts/cookieLogin.js"></script>
+    </body>
+</html>

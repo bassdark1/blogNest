@@ -1,6 +1,7 @@
 const usernameInput = document.getElementById('usernameInput');
 const passwordInput = document.getElementById('passwordInput');
 const passwordConfirmInput = document.getElementById('passwordConfirmInput');
+const signupButton = document.getElementById('signup-button');
 
 usernameInput.value = "";
 passwordInput.value = "";
@@ -73,6 +74,8 @@ function attemptToCreateAccount(username, password, passwordConfirm) {
 
             if (answer === 0) {
                 errorMessage.innerHTML = "<b style='color: green;'>Account has been created - <a href='/login' style='color: lightblue !important'>login page</a></b>";
+
+                window.location.href = "/login";
             } else if (answer == 1) {
                 errorMessage.innerHTML = "<b style='color: red;'>Username is taken</b>";
             } else if (answer == 2) {
@@ -85,12 +88,30 @@ function attemptToCreateAccount(username, password, passwordConfirm) {
 
 }
 
-passwordConfirmInput.addEventListener('keydown', function(event) {
+document.getElementById('signup-button').addEventListener('click', async function(e) {
+    e.preventDefault();
+    const username = document.getElementById('usernameInput').value;
+    const password = document.getElementById('passwordInput').value;
+    const token = grecaptcha.getResponse();
 
-    if (event.key === 'Enter') {
-
-        attemptToCreateAccount(usernameInput.value, passwordInput.value, passwordConfirmInput.value);
-
-    }
-
+    fetch('/verify-captcha', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ username, password, token })
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            // CAPTCHA verification successful, proceed with login
+            attemptToCreateAccount(usernameInput.value, passwordInput.value, passwordConfirmInput.value);
+        } else {
+            // CAPTCHA verification failed, handle accordingly
+            errorMessage.innerHTML = "<b style='color: red;'>Solve the Captcha to proceed.</b>";
+        }
+    })
+    .catch(error => {
+        console.error('Error verifying captcha:', error);
+    });
 });

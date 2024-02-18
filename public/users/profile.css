@@ -1,0 +1,367 @@
+:root {
+    --bg-color: #1a202c;
+    --header-color: #4a5568;
+    --button-hover: #a1a5a8;
+    --font: "Fira code", monospace;
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    
+}
+
+header {
+    z-index: 1;
+    width: 100%;
+    position: fixed;
+    background-color: var(--header-color);
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 2vw;
+}
+#main {
+    position: relative;
+    top: 12vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20vh;
+}
+#logo-text {
+    color: white;
+    font-family: Arial;
+    font-size: 20px;
+
+}
+#logo-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 1vw;
+    align-items: center;
+    cursor: pointer;
+}
+img {
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    }
+
+#search-div {
+    padding: 1vw 1vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#search-bar {
+    outline: none;
+    width: 49vw;
+    background-color: #2d3748;
+    color: white;
+    padding: 1vh;
+    border-radius: 25px;
+    display: inline-block;
+
+    font-size: 15px;
+
+    border: solid;
+    border-width: 0.15vw;
+    border-color: black;
+}
+
+
+
+#login-button-container {
+    display: flex;
+    gap: 2vw;
+    position: relative;
+    top: 0.4vh;
+
+}
+
+#login-button {
+    background-color: white;
+    border: solid 0.15vw black;
+    cursor: pointer;
+    width: 6vw;
+    color: black;
+
+    border-radius: 25px;
+    padding: 1vh;
+    font-size: 15px;
+    font-weight: bold;
+
+    transition: 100ms;
+}
+#signup-button {
+    background-color: white;
+    border: solid 0.15vw black;
+    cursor: pointer;
+    width: 6vw;
+    color: black;
+
+    border-radius: 25px;
+    padding: 1vh;
+    font-size: 15px;
+    font-weight: bold;
+
+    transition: 100ms;
+}
+
+#login-button:hover {
+
+    background-color: var(--button-hover);
+    transition: 100ms;
+
+}
+
+#signup-button:hover {
+
+    background-color: var(--button-hover);
+    transition: 100ms;
+
+}
+#avatar-dropdown {
+    background-color: white;
+    border: solid 0.15vw black;
+    cursor: pointer;
+    width: 100%;
+    color: black;
+
+    border-radius: 25px;
+    padding: 0.85vh;
+    font-size: 15px;
+    font-weight: bold;
+
+    transition: 100ms;
+    filter: brightness(100%);
+}
+
+#avatar-dropdown:hover {
+
+    filter: brightness(60%);
+    transition: 100ms;
+
+}
+#user-info-container {
+    font-family: var(--font);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3vh;
+    flex-direction: column;
+}
+
+#profile-pic {
+    width: 5vw; 
+    height: 5vw; 
+    border-radius: 50%;
+}
+
+#username-title {
+    color: white;
+    font-size: 3vw;
+    margin-left: -1vw;
+}
+
+#bio-container, #profile-pic-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#save-button-bio, #edit-bio, #edit-profile-pic, #save-button-pic {
+    background-color: white;
+    border: solid 0.15vw black;
+    cursor: pointer;
+    width: max-content;
+    color: black;
+
+    border-radius: 25px;
+    padding: 0.3vh;
+    font-size: 12px;
+    font-weight: bold;
+
+    transition: 100ms;
+}
+
+#save-button-bio:hover, #edit-bio:hover, #edit-profile-pic:hover, #save-button-pic:hover {
+    background-color: var(--button-hover);
+    
+    transition: 100ms;
+}
+
+#bio-text {
+    color: white;
+}
+/* #bio-text:hover, #follower-count:hover, #account-creation-date:hover {
+    font-size: 22px;
+    transition: 300ms;
+} */
+#account-creation-date {
+    color: white;
+}
+#follow-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
+}
+
+#follow-button {
+    color: white;
+    background-color: #168cff;
+    border: none;
+    border-radius: 20%;
+    padding: 0.5vw;
+    transition: 100ms;
+}
+
+#follow-button:hover {
+    background-color: #136cc6;
+    transition: 100ms;
+}
+
+#follower-count {
+    color: white;
+    cursor: pointer;
+}
+
+#create-post-button {
+    background-color: white;
+    border: solid 0.15vw black;
+    cursor: pointer;
+    width: max-content;
+    color: black;
+
+    border-radius: 25px;
+    padding: 1vh;
+    font-size: 15px;
+    font-weight: bold;
+
+    transition: 100ms;
+}
+#create-post-button:hover {
+    background-color: var(--button-hover);
+
+    transition: 100ms;
+}
+
+#profile-pic-container, #bio-container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    gap: 2vh;
+}
+
+#error-message {
+    font-size: 20px;
+}
+
+.blog-link, .blog-description, nav button {
+    font-family: var(--font);
+}
+.content {
+    border: 1px solid var(--header-color);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    gap: 1vh;
+
+}
+.blog-link {
+    text-decoration: none;
+    text-transform: capitalize;
+    text-align: left;
+    color: white;
+    font-size: 23px;
+    cursor: pointer;
+    transition: 450ms;
+}  
+.blog-description {
+    text-align: left;
+    color: white;
+    font-size: 18px;
+}
+.blog-date {
+    font-family: var(--font);
+    text-align: left;
+    color: white;
+    font-size: 14px;
+}
+.blog-link:hover {
+    font-size: 30px;
+    transition: 450ms;
+}
+
+#posts-container {
+    display: flex;
+    flex-direction: column;
+    gap: 4vh;
+}
+
+#user-post-text {
+    font-size: 20px;
+    color: white;
+    font-family: var(--font);
+    font-weight: 600;
+    
+}
+
+#user-post {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 3vh;
+    
+    
+}
+
+.delete-post-button {
+    display: block;
+    width: min-content;
+    background-color: white;
+    border: solid 0.15vw black;
+    cursor: pointer;
+    color: black;
+
+    border-radius: 25px;
+    padding: 1vh;
+    font-size: 15px;
+    font-weight: bold;
+
+    transition: 100ms;
+}
+
+.delete-post-button:hover {
+    background-color: var(--button-hover);
+    transition: 100ms;
+}
+
+#modal-container {
+    display: none;
+    z-index: 1;
+}
+
+#modal-content {
+    background-color: white;
+    width: 200px;
+    height: 200px;
+    
+}
