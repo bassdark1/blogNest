@@ -1,0 +1,13 @@
+
+
+#follower {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 20vh;
+    color: white;
+    font-family: var(--font);
+    
+}

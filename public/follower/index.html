@@ -4,7 +4,8 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>BlogNest</title>
-        <link rel="stylesheet" type="text/css" href="assets/styles/style.css">
+        <link rel="stylesheet" type="text/css" href="/assets/styles/style.css">
+        <link rel="stylesheet" type="text/css" href="style.css"
         <link rel="icon" href="/favicon.png" type="image/icon type">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,5 +13,20 @@
     </head>
 
     <body>
+        <header>
+            <div id="logo-container" onclick="window.location.href = '/'">
+            <img src="/favicon.png">
+            <div id="logo-text">
+               BlogNest
+            </div>
+            </div>
+          <div id="search-div">
+          <input type="search" id="search-bar" placeholder="Search on BlogNest">
+          </div>
+          <div id="login-button-container">
+          </div>
+        </header>
         <div id="follower">Followers: </div>
+        <script src="main.js"></script>
+        <script src="/assets/scripts/cookieLogin.js"></script>
     </body>

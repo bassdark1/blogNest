@@ -56,6 +56,12 @@ recent_button.onclick = () => {
     window.location.href = '/';
 }
 
+const following_button = document.getElementById("following-post-button");
+
+following_button.onclick = () => {
+    window.location.href = '/following post'
+}
+
 const loading_screen = () => {
     const content = document.getElementsByClassName("content");
     const feedElement = document.getElementById("feed");

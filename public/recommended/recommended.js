@@ -94,3 +94,9 @@ const recent_button = document.getElementById("recent-button")
 recent_button.onclick = () => {
     window.location.href = '/';
 }
+
+const following_button = document.getElementById("following-post-button");
+
+following_button.onclick = () => {
+    window.location.href = '/following post'
+}
