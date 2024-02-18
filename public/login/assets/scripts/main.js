@@ -4,7 +4,6 @@ const loginButton = document.getElementById('login-button');
 
 usernameInput.value = "";
 passwordInput.value = "";
-passwordConfirmInput.value = "";
 
 const errorMessage = document.getElementById('error-message');
 
@@ -38,16 +37,6 @@ usernameInput.addEventListener('keydown', function (event) {
 
 });
 
-passwordInput.addEventListener('keydown', function (event) {
-
-    if (event.key === 'Enter') {
-
-        passwordConfirmInput.focus();
-
-    }
-
-});
-
 function attemptToLogin(username, password) {
 
     if (username != null) {
@@ -71,7 +60,7 @@ passwordInput.addEventListener('keydown', function(event) {
 
     if (event.key === 'Enter') {
 
-        attemptToLogin(usernameInput.value, passwordInput.value, passwordConfirmInput.value);
+        attemptToLogin(usernameInput.value, passwordInput.value);
 
     }
 
@@ -79,6 +68,6 @@ passwordInput.addEventListener('keydown', function(event) {
 
 loginButton.addEventListener('click', function() {
 
-    attemptToLogin(usernameInput.value, passwordInput.value, passwordConfirmInput.value);
+    attemptToLogin(usernameInput.value, passwordInput.value);
 
 });
