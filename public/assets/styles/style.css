@@ -48,7 +48,7 @@ nav button:hover {
 }
 
 nav {
-    top: 10%;
+    top: 8%;
     position: fixed;
     display: flex;
     flex-direction: column;
