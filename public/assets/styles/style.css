@@ -214,8 +214,9 @@ img {
     background-color: white;
     border: solid 0.15vw black;
     cursor: pointer;
-    width: 100%;
+    width: min-content;
     color: black;
+    text-align: center;
 
     border-radius: 25px;
     padding: 0.85vh;
